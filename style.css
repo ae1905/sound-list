@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;600;700&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Familjen Grotesk", sans-serif;
+  font-size: 16px;
+  height: 100vh;
+
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "nav content sidebar"
+    "nav footer footer";
+  grid-template-columns: 2fr 4fr 1fr;
+  grid-template-rows: 100px 1fr 50px;
+}
+
+header,
+footer,
+main,
+aside,
+nav {
+  background-color: whitesmoke;
+  color: #fff;
+  padding: 20px;
+  border: rgb(226, 232, 234) 1px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header {
+  grid-area: header;
+}
+
+nav {
+  grid-area: nav;
+}
+
+main {
+  grid-area: content;
+  display: flex;
+  flex-direction: column;
+}
+aside {
+  grid-area: sidebar;
+}
+
+footer {
+  grid-area: footer;
+}
+.container {
+  width: 100%;
+}
+
+/* #wave-spectrogram {
+  width: 100%;
+  height: 300px;
+} */
+
+h1 {
+  font-size: medium;
+  width: 100%;
+  text-align: center;
+  margin: 20px 0 20px;
+  color: black;
+}
+.main-input {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.mb-3 {
+  width: 50%;
+}
+
+#input_form {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+input {
+  margin-left: 30px;
+  margin-right: 15px;
+}
+
+/* Navbar playlist*/
+
+#playlist {
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+}
+#play_button {
+  width: 100%;
+}
+#playPause {
+  width: 100%;
+}
+
+footer p {
+  color: black;
+}

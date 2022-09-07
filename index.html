@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Sound Playlist</title>
+
+
+    <!-- Bootstrap -->
+    <link
+      href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- <link rel="stylesheet" href="../css/style.css" />-->
+    <link rel="stylesheet" href="style.css" />
+    <!-- wavesurfer.js -->
+    
+    <script src="wavesurfer.js"></script>
+    <script src="wavesurfer.spectrogram.js"></script>
+    <!-- App -->
+    <script src="app.js" defer></script>
+  </head>
+
+  <body>
+    
+    <header >
+         
+        <div class="main-input">
+          <div>
+            <h1> Upload wav files, Play Sound & Show STFT</h1>
+          </div>
+          <div class="mb-3" >
+              <form method=post enctype=multipart/form-data id="input_form">
+                <input
+                class="form-control"
+                type="file"
+                name="file"
+                id="fileinput"
+                accept=".wav"
+                multiple/>
+              </form>
+          </div>
+          <div class="col-sm-2">
+              <button class="btn btn-primary" id="refresh">Load</button>
+          </div>
+      </div>
+
+    </header>
+
+
+    <main>
+    <div class="container">      
+      <div id="waveform">
+              <!-- Here be waveform -->
+      </div>
+      <div id="wave-spectrogram"></div>
+    </div>
+  </main>
+
+  <nav>
+    <div
+          class="list-group"
+          id="playlist"
+        >
+    </div>
+  </nav>
+
+  <aside>
+    <div class="col-sm-2" id="play_button">
+      <button class="btn btn-success btn-block" id="playPause">
+        <span id="play">
+          <i class="glyphicon glyphicon-play"></i>
+          Play
+        </span>
+
+        <span id="pause" style="display: none">
+          <i class="glyphicon glyphicon-pause"></i>
+          Pause
+        </span>
+      </button>
+    </div>
+  </aside>
+
+  <footer>
+    <p> Contact email: ae1905@163.com</p>
+  </footer>
+
+  </body>
+</html>
